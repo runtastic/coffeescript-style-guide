@@ -690,6 +690,17 @@ convertKmToMeter = (km) ->
 convertKmToMeter = (km) ->
   km * 1000
 ```
+
+Use dashes for filenames:
+```coffeescript
+# Yes
+analytics-tracker.coffee
+
+# No
+analytics_tracker.coffee
+analyticsTracker.coffee
+```
+
 [coffeescript]: http://jashkenas.github.com/coffee-script/
 [coffeescript-issue-425]: https://github.com/jashkenas/coffee-script/issues/425
 [spine-js]: http://spinejs.com/
