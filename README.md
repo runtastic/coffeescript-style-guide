@@ -517,12 +517,12 @@ Ember.Object.extend
 
 Define your own properties and observers:
 ```coffeescript
-helper = (prefix, value) ->
+helper = (value) ->
   ( ->
     # ... do something ...
   ).property(value)
 
-helper = (prefix, value) ->
+helper = (value) ->
   ( ->
     # ... do something ...
   ).observes(value)
