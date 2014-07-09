@@ -714,6 +714,32 @@ analytics_tracker.coffee
 analyticsTracker.coffee
 ```
 
+Actions should be defined at the end of the class: 
+```coffeescript
+# Yes
+Ember.Object.extend
+  setupEventListener: ( ->
+    # ... setup event listeners ...
+  ).on('didInsertElement')
+  
+  actions:
+    testAction: ->
+      # ... do something ...
+
+# No
+Ember.Object.extend
+  actions:
+    testAction: ->
+      # ... do something ...  
+  
+  setupEventListener: ( ->
+    # ... setup event listeners ...
+  ).on('didInsertElement')
+```
+
+
+
+
 [coffeescript]: http://jashkenas.github.com/coffee-script/
 [coffeescript-issue-425]: https://github.com/jashkenas/coffee-script/issues/425
 [spine-js]: http://spinejs.com/
