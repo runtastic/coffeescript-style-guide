@@ -515,6 +515,19 @@ Ember.Object.extend
   ).observes('lastName')
 ```  
 
+Define your own properties and observers:
+```coffeescript
+helper = (prefix, value) ->
+  ( ->
+    # ... do something ...
+  ).property(value)
+
+helper = (prefix, value) ->
+  ( ->
+    # ... do something ...
+  ).observes(value)
+```  
+
 Always use `Ember.computed` instead of custom computed properties where possible: 
 ```coffeescript
 DRIVING_AGE_US = 16
